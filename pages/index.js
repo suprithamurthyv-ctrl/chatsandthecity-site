@@ -21,35 +21,28 @@ export default function Home() {
 
       {/* HERO */}
       <section id="home" className="relative overflow-hidden">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(1200px_600px_at_80%_-10%,#fbe7ff_0%,transparent_60%),radial-gradient(1000px_500px_at_-10%_10%,#e8f5ff_0%,transparent_50%)]" />
-        <div className="max-w-6xl mx-auto px-4 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
+        <div className="max-w-6xl mx-auto px-4 py-12 md:py-20 grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">Conversations with women who bring <span className="underline decoration-pink-300 decoration-4">wit, range,</span> and real life to the mic.</h1>
-            <p className="mt-5 text-lg text-gray-600">A women-led interview show hosted by Gelathi — part chai, part cheek, all heart. Big talk and banter on work, art, love, money, power, nature, and everything in between.</p>
+            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
+              Conversations with women who bring wit, range, and a spark of magic to everyday life.
+            </h1>
+            <p className="mt-5 text-lg text-gray-600">
+              Chats & The City is your weekly dose of laughter, insight, and unapologetically female perspectives.
+            </p>
             <div className="mt-6 flex flex-wrap items-center gap-3">
               <a href="#subscribe" className="rounded-2xl px-5 py-3 bg-black text-white font-medium">Subscribe</a>
               <a href="#episodes" className="rounded-2xl px-5 py-3 border font-medium">Latest episodes</a>
             </div>
             <p className="mt-4 text-sm text-gray-500">New episodes every week • Recorded in Jakarta ✦ Women-only guests</p>
           </div>
-          <div className="relative">
-            <div className="aspect-[4/5] rounded-3xl bg-gradient-to-br from-gray-100 to-gray-200 shadow-xl overflow-hidden">
-              <div className="w-full h-full grid place-items-center p-6">
-                <div className="text-center">
-                  <div className="text-xs uppercase tracking-wide text-gray-500">Podcast Artwork Placeholder</div>
-                  <div className="mt-2 text-2xl font-bold">Chats & the City</div>
-                  <div className="mt-2 text-gray-600">Drop your cover art here</div>
-                </div>
-              </div>
-            </div>
-            <div className="absolute -bottom-6 -left-6 bg-white border rounded-2xl shadow-md px-4 py-3">
-              <div className="text-xs text-gray-500">Featured guests</div>
-              <div className="mt-1 flex -space-x-2">
-                {["Aparna","Bindu","Susie","You"].map((n, i) => (
-                  <span key={i} className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-black text-white text-xs border-2 border-white">{n[0]}</span>
-                ))}
-              </div>
-            </div>
+
+          {/* Cover image */}
+          <div className="rounded-3xl overflow-hidden border shadow-lg">
+            <img
+              src="/cover.jpg"
+              alt="Chats & The City cover"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </section>
@@ -59,17 +52,14 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 py-10 md:py-12 grid md:grid-cols-2 gap-6 items-center">
           <div>
             <h2 className="text-2xl md:text-3xl font-bold">Subscribe wherever you listen</h2>
-            <p className="mt-2 text-gray-600">We’ll be on every major platform at launch. Add us now so you don’t miss Episode 1.</p>
+            <p className="mt-2 text-gray-600">Never miss an episode — join our mailing list or find us on your favorite platform.</p>
           </div>
           <div className="flex flex-wrap items-center gap-3">
-            {[
-              { label: 'Apple Podcasts', href: '#' },
-              { label: 'Spotify', href: '#' },
-              { label: 'YouTube', href: '#' },
-              { label: 'RSS', href: '#' },
-            ].map((b) => (
-              <a key={b.label} href={b.href} className="rounded-xl px-4 py-2 border bg-white shadow-sm hover:shadow text-sm">{b.label}</a>
-            ))}
+            {/* Replace # with your links when ready */}
+            <a href="#" className="rounded-xl px-4 py-2 border bg-white shadow-sm hover:shadow text-sm">Apple Podcasts</a>
+            <a href="#" className="rounded-xl px-4 py-2 border bg-white shadow-sm hover:shadow text-sm">Spotify</a>
+            <a href="#" className="rounded-xl px-4 py-2 border bg-white shadow-sm hover:shadow text-sm">YouTube</a>
+            <a href="#" className="rounded-xl px-4 py-2 border bg-white shadow-sm hover:shadow text-sm">RSS</a>
           </div>
         </div>
       </section>
@@ -80,14 +70,21 @@ export default function Home() {
           <h2 className="text-3xl font-extrabold tracking-tight">Latest Episodes</h2>
           <a href="#" className="text-sm text-gray-600 hover:text-gray-900">See all</a>
         </div>
+
         <div className="mt-8 grid md:grid-cols-3 gap-6">
-          {[1,2,3].map((i) => (
-            <article key={i} className="group rounded-3xl overflow-hidden border hover:shadow-lg transition-shadow">
-              <div className="aspect-video bg-gray-100 grid place-items-center text-gray-500">Episode artwork</div>
+          {[
+            { n: 1, title: "The First Sip", teaser: "Why women’s conversations are the strongest caffeine." },
+            { n: 2, title: "Cat Moms Unite", teaser: "On living with fur, claws, and unconditional love." },
+            { n: 3, title: "Finding Joy in Chaos", teaser: "Balancing ambition, self-care, and spontaneity." }
+          ].map((ep) => (
+            <article key={ep.n} className="group rounded-3xl overflow-hidden border hover:shadow-lg transition-shadow">
+              <div className="aspect-video bg-gray-100 grid place-items-center text-gray-500">
+                Episode artwork
+              </div>
               <div className="p-5">
-                <div className="text-xs uppercase tracking-wide text-gray-500">Episode {i}</div>
-                <h3 className="mt-1 font-semibold text-lg">Title placeholder — witty, honest, and a little chaotic</h3>
-                <p className="mt-2 text-sm text-gray-600">Two-line teaser. What we learned, what we laughed at, and one brave take.</p>
+                <div className="text-xs uppercase tracking-wide text-gray-500">Episode {ep.n}</div>
+                <h3 className="mt-1 font-semibold text-lg">{ep.title}</h3>
+                <p className="mt-2 text-sm text-gray-600">{ep.teaser}</p>
                 <div className="mt-4 flex items-center gap-3">
                   <a href="#" className="text-sm font-medium underline underline-offset-4">Listen</a>
                   <span className="text-gray-400">•</span>
@@ -104,13 +101,14 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h2 className="text-3xl font-extrabold tracking-tight">About the show</h2>
-            <p className="mt-4 text-gray-700 leading-relaxed">A women-led interview series from Jakarta. We talk work, love, money, art, nature, power, and the messy middle — through stories that feel like chai with your smartest friend. Guests include founders, artists, activists, athletes, and the women you don’t hear from enough.</p>
-            <ul className="mt-6 space-y-2 text-gray-700">
-              <li>✦ Women-only guest list</li>
-              <li>✦ Weekly drops, 30–40 mins</li>
-              <li>✦ Smart, warm, slightly feral vibes</li>
-            </ul>
+            <p className="mt-4 text-gray-700 leading-relaxed">
+              Chats & The City celebrates women’s voices without limiting them to “women’s issues.”
+              We talk about work, love, cats, books, messy kitchens, brilliant ideas, and everything in between.
+              No filters, no pretence — just honest talk, over a cup of kopi.
+            </p>
           </div>
+
+          {/* Newsletter form (non-functional placeholder) */}
           <div className="rounded-3xl border p-6 bg-gray-50">
             <h3 className="text-lg font-semibold">Newsletter</h3>
             <p className="mt-2 text-sm text-gray-600">Get episode drops, guest picks, and extras in your inbox.</p>
@@ -128,12 +126,14 @@ export default function Home() {
         <h2 className="text-3xl font-extrabold tracking-tight">Host & recurring guests</h2>
         <div className="mt-8 grid md:grid-cols-3 gap-6">
           {[
-            { name: 'Gelathi (Host)', bio: 'Witty conversation driver. Regional Director turned podcast troublemaker. Jakarta-based.'},
-            { name: 'Aparna Bhatnagar Saxena', bio: 'CEO of Torajamelo & co-founder/CEO of Ahana. Sustainability and veganism in action.'},
-            { name: 'Bindu', bio: 'Nature soul. Feminine energy. Brings the forest to the feed.'},
+            { name: "Gelathi (Host)", bio: "Witty conversation driver. Regional Director turned podcast troublemaker. Jakarta-based.", img: "/hosts/gelathi.jpg" },
+            { name: "Bindu", bio: "Nature whisperer and keeper of calm, with roots deep in the earth.", img: "/hosts/bindu.jpg" },
+            { name: "Susmitha", bio: "Cat mom and real-life Disney princess, welcoming every animal into her magical garden.", img: "/hosts/susmitha.jpg" },
           ].map((p, i) => (
             <div key={i} className="rounded-3xl border p-6 bg-white hover:shadow-md transition-shadow">
-              <div className="aspect-square rounded-2xl bg-gray-100 grid place-items-center text-gray-400">Photo</div>
+              <div className="aspect-square rounded-2xl overflow-hidden bg-gray-100">
+                <img src={p.img} alt={p.name} className="w-full h-full object-cover" />
+              </div>
               <h3 className="mt-4 font-semibold">{p.name}</h3>
               <p className="mt-1 text-sm text-gray-600">{p.bio}</p>
             </div>
@@ -141,7 +141,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CONTACT / FOOTER */}
+      {/* FOOTER */}
       <footer id="contact" className="border-t bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-6">
           <div>
