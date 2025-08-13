@@ -128,7 +128,7 @@ export default function Home() {
           {[
             { name: "Supritha (Host)", bio: "Witty conversation driver. Regional Director turned podcast troublemaker. Jakarta-based.", img: "/gelathi.jpg" },
             { name: "Bindu", bio: "Nature whisperer and keeper of calm, with roots deep in the earth.", img: "/bindu.jpg" },
-            { name: "Susmitha", bio: "Cat mom and real-life Disney princess, welcoming every animal into her magical garden.", img: "/susmitha.jpg" },
+            { name: "Susmitha", bio: "Cat mom and real-life Disney princess, welcoming every animal into her magical garden.", img: "/susmithaa.jpg" },
           ].map((p, i) => (
             <div key={i} className="rounded-3xl border p-6 bg-white hover:shadow-md transition-shadow">
               <div className="aspect-square rounded-2xl overflow-hidden bg-gray-100">
