@@ -8,7 +8,7 @@ export default function Home() {
   const hosts = [
     { name: "Supritha (Host)", bio: "Witty conversation driver. Regional Director turned podcast troublemaker. Jakarta-based.", img: "/gelathi.jpg" },
     { name: "Bindu", bio: "Nature whisperer and keeper of calm, with roots deep in the earth.", img: "/bindu.jpg" },
-    { name: "Susmitha", bio: "Cat mom and real-life Disney princess, welcoming every animal into her magical garden.", img: "/susmitha.jpg" }
+    { name: "Susmitha", bio: "Cat mom and real-life Disney princess, welcoming every animal into her magical garden.", img: "/susmithaa.jpg" }
   ];
 
   return (
@@ -145,7 +145,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-6">
           <div>
             <div className="font-semibold">Chats & the City</div>
-            <p className="mt-2 text-sm text-gray-600">Women speaking freely, expansively, and unexpectedly — from Jakarta to the world.</p>
+            <p className="mt-2 text-sm text-gray-600">Women speaking freely, expansively, and unexpectedly — from us to the world.</p>
           </div>
           <div>
             <div className="font-semibold">Links</div>
