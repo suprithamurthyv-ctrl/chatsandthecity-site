@@ -126,7 +126,7 @@ export default function Home() {
         <h2 className="text-3xl font-extrabold tracking-tight">Host & recurring guests</h2>
         <div className="mt-8 grid md:grid-cols-3 gap-6">
           {[
-            { name: "Gelathi (Host)", bio: "Witty conversation driver. Regional Director turned podcast troublemaker. Jakarta-based.", img: "/hosts/gelathi.jpg" },
+            { name: "Supritha (Host)", bio: "Witty conversation driver. Regional Director turned podcast troublemaker. Jakarta-based.", img: "/hosts/gelathi.jpg" },
             { name: "Bindu", bio: "Nature whisperer and keeper of calm, with roots deep in the earth.", img: "/hosts/bindu.jpg" },
             { name: "Susmitha", bio: "Cat mom and real-life Disney princess, welcoming every animal into her magical garden.", img: "/hosts/susmitha.jpg" },
           ].map((p, i) => (
