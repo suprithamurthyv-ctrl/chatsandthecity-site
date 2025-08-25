@@ -179,7 +179,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-6">
           <div>
             <div className="font-semibold">Chats & the City</div>
-            <p className="mt-2 text-sm text-gray-600">Women speaking freely, expansively, and unexpectedly — from Jakarta to the world.</p>
+            <p className="mt-2 text-sm text-gray-600">Women speaking freely, expansively, and unexpectedly!.</p>
           </div>
           <div>
             <div className="font-semibold">Links</div>
