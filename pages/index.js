@@ -169,8 +169,7 @@ export default function Home() {
             <h2 className="text-3xl font-extrabold tracking-tight">About the show</h2>
             <p className="mt-4 text-gray-700 leading-relaxed">
               Chats & The City celebrates women’s voices without limiting them
-              to “women’s issues.” We talk about work, love, cats, books, messy
-              kitchens, brilliant ideas, and everything in between. No filters,
+              to “women’s issues.” We talk about work, love, cats, books, brilliant ideas, and everything in between. No filters,
               no pretence — just honest talk, over a cup of kopi.
             </p>
           </div>
