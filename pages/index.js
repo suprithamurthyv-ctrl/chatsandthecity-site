@@ -1,5 +1,5 @@
 export default function Home() {
-  // ---- Editable data ----
+  // Editable data
   const episodes = [
     {
       n: 1,
@@ -24,21 +24,18 @@ export default function Home() {
   const hosts = [
     {
       name: "Supritha (Host)",
-      bio:
-        "Witty conversation driver. Regional Director turned podcast troublemaker. Jakarta-based.",
+      bio: "Witty conversation driver. Regional Director turned podcast troublemaker.",
       img: "/gelathi.jpg",
     },
     {
       name: "Bindu",
-      bio:
-        "Nature whisperer and keeper of calm, with roots deep in the earth.",
+      bio: "Nature whisperer and keeper of calm, with roots deep in the earth.",
       img: "/bindu.jpg",
     },
     {
       name: "Susmitha",
-      bio:
-        "Cat mom and real-life Disney princess, welcoming every animal into her magical garden.",
-      img: "/susmithaa.jpg", // make sure filename in /public matches
+      bio: "Cat mom and real-life Disney princess, welcoming every animal into her magical garden.",
+      img: "/susmithaa.jpg", // make sure /public/susmithaa.jpg exists
     },
   ];
 
@@ -51,9 +48,7 @@ export default function Home() {
             <span className="inline-flex items-center justify-center w-9 h-9 rounded-2xl bg-black text-white font-bold">
               C
             </span>
-            <span className="font-semibold tracking-tight text-lg">
-              Chats & the City
-            </span>
+            <span className="font-semibold tracking-tight text-lg">Chats & the City</span>
           </a>
           <nav className="hidden md:flex items-center gap-6 text-sm">
             <a href="#episodes" className="hover:text-black/70">Episodes</a>
@@ -76,47 +71,30 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 py-12 md:py-20 grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
-              Conversations with women who bring wit, range, and a spark of
-              magic to everyday life.
+              Conversations with women who bring wit, range, and a spark of magic to everyday life.
             </h1>
             <p className="mt-5 text-lg text-gray-600">
-              Chats & The City is your weekly dose of laughter, insight, and
-              unapologetically female perspectives.
+              Chats & The City is your weekly dose of laughter, insight, and unapologetically female perspectives.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-3">
-              <a
-                href="#episodes"
-                className="rounded-2xl px-5 py-3 border font-medium"
-              >
-                Latest episodes
-              </a>
+              <a href="#episodes" className="rounded-2xl px-5 py-3 border font-medium">Latest episodes</a>
             </div>
-            <p className="mt-4 text-sm text-gray-500">
-              New episodes every week • Recorded in Jakarta ✦ Women-only guests
-            </p>
+            <p className="mt-4 text-sm text-gray-500">New episodes every week • Women-only guests</p>
           </div>
 
           {/* Cover image */}
           <div className="rounded-3xl overflow-hidden border shadow-lg">
-            <img
-              src="/cover.jpg"
-              alt="Chats & The City cover"
-              className="w-full h-full object-cover"
-            />
+            <img src="/cover.jpg" alt="Chats & The City cover" className="w-full h-full object-cover" />
           </div>
         </div>
       </section>
 
-      {/* SUBSCRIBE STRIP (platform buttons only; no email form) */}
+      {/* SUBSCRIBE STRIP (platform buttons only) */}
       <section id="subscribe" className="border-y bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 py-10 md:py-12 grid md:grid-cols-2 gap-6 items-center">
           <div>
-            <h2 className="text-2xl md:text-3xl font-bold">
-              Subscribe wherever you listen
-            </h2>
-            <p className="mt-2 text-gray-600">
-              Never miss an episode — find us on your favorite platform.
-            </p>
+            <h2 className="text-2xl md:text-3xl font-bold">Subscribe wherever you listen</h2>
+            <p className="mt-2 text-gray-600">Never miss an episode. Find us on your favorite platform.</p>
           </div>
           <div className="flex flex-wrap items-center gap-3">
             <a href="#" className="rounded-xl px-4 py-2 border bg-white shadow-sm hover:shadow text-sm">Apple Podcasts</a>
@@ -138,17 +116,10 @@ export default function Home() {
           {episodes.map((ep) => (
             <article key={ep.n} className="group rounded-3xl overflow-hidden border hover:shadow-lg transition-shadow">
               <div className="aspect-video overflow-hidden bg-gray-100">
-                <img
-                  src={ep.img}
-                  alt={`Artwork for ${ep.title}`}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
+                <img src={ep.img} alt={`Artwork for ${ep.title}`} className="w-full h-full object-cover" loading="lazy" />
               </div>
               <div className="p-5">
-                <div className="text-xs uppercase tracking-wide text-gray-500">
-                  Episode {ep.n}
-                </div>
+                <div className="text-xs uppercase tracking-wide text-gray-500">Episode {ep.n}</div>
                 <h3 className="mt-1 font-semibold text-lg">{ep.title}</h3>
                 <p className="mt-2 text-sm text-gray-600">{ep.teaser}</p>
                 <div className="mt-4 flex items-center gap-3">
@@ -162,15 +133,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ABOUT (no newsletter) */}
+      {/* ABOUT */}
       <section id="about" className="max-w-6xl mx-auto px-4 pb-16">
         <div className="grid md:grid-cols-1 gap-10 items-center">
           <div>
             <h2 className="text-3xl font-extrabold tracking-tight">About the show</h2>
             <p className="mt-4 text-gray-700 leading-relaxed">
-              Chats & The City celebrates women’s voices without limiting them
-              to “women’s issues.” Chats & The City celebrates women speaking freely about ideas, ambition, play, culture, friendship, money, art, love, travel, sport, and everything in between—unfiltered and funny, with range and real life.. No filters,
-              no pretence — just honest talk, over a cup of kopi.
+              Chats &amp; The City is a space for women to speak freely about travel, sport, pop culture, tech, AI, sustainability, money, books, art, pets, and everything in between. 
+              Big ideas, playful debates, and unfiltered laughter. 
+              No stereotypes, no boxes, just wit, range, and unapologetically female perspectives.
             </p>
           </div>
         </div>
@@ -178,7 +149,7 @@ export default function Home() {
 
       {/* HOSTS */}
       <section id="hosts" className="max-w-6xl mx-auto px-4 pb-20">
-        <h2 className="text-3xl font-extrabold tracking-tight">Host & recurring guests</h2>
+        <h2 className="text-3xl font-extrabold tracking-tight">Host and recurring guests</h2>
         <div className="mt-8 grid md:grid-cols-3 gap-6">
           {hosts.map((p, i) => (
             <div key={i} className="rounded-3xl border p-6 bg-white hover:shadow-md transition-shadow">
@@ -198,7 +169,7 @@ export default function Home() {
           <div>
             <div className="font-semibold">Chats & the City</div>
             <p className="mt-2 text-sm text-gray-600">
-              Women speaking freely, expansively, and unexpectedly — from Jakarta to the world.
+              Wit, range, and unapologetically female perspectives everywhere.
             </p>
           </div>
           <div>
@@ -216,7 +187,7 @@ export default function Home() {
               <li><a href="#" className="hover:underline">Instagram</a></li>
               <li><a href="#" className="hover:underline">LinkedIn</a></li>
               <li><a href="#" className="hover:underline">YouTube</a></li>
-              <li><a href="mailto:supritha@chatsandthecity.com" className="hover:underline">supritha@chatsandthecity.com</a></li>
+              <li><a href="mailto:hello@chatsandthecity.com" className="hover:underline">hello@chatsandthecity.com</a></li>
             </ul>
           </div>
         </div>
