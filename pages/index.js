@@ -6,9 +6,10 @@ export default function Home() {
   ];
 
   const hosts = [
+    // Make sure these filenames match exactly what you uploaded to /public
     { name: "Supritha (Host)", bio: "Witty conversation driver. Regional Director turned podcast troublemaker. Jakarta-based.", img: "/gelathi.jpg" },
     { name: "Bindu", bio: "Nature whisperer and keeper of calm, with roots deep in the earth.", img: "/bindu.jpg" },
-    { name: "Susmitha", bio: "Cat mom and real-life Disney princess, welcoming every animal into her magical garden.", img: "/susmithaa.jpg" }
+    { name: "Susmitha", bio: "Cat mom and real-life Disney princess, welcoming every animal into her magical garden.", img: "/susmitha.jpg" }
   ];
 
   return (
@@ -99,7 +100,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ABOUT */}
+      {/* ABOUT + NEWSLETTER (GoDaddy iframe embed) */}
       <section id="about" className="max-w-6xl mx-auto px-4 pb-16">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div>
@@ -111,16 +112,25 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Newsletter form (non-functional placeholder) */}
-    <a
-  href="http://gem.godaddy.com/signups/5319f7ed4bc549858a878844e19458b0/join"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="rounded-xl px-5 py-3 bg-black text-white font-medium inline-block"
->
-  Join the newsletter
-</a>
+          <div className="rounded-3xl border p-6 bg-gray-50">
+            <h3 className="text-lg font-semibold">Newsletter</h3>
+            <p className="mt-2 text-sm text-gray-600">Get episode drops, guest picks, and extras in your inbox.</p>
 
+            {/* GoDaddy Stylish Embedding iframe */}
+            <div className="mt-4 rounded-xl overflow-hidden border">
+              <iframe
+                src="https://gem.godaddy.com/signups/5319f7ed4bc549858a878844e19458b0/iframe"
+                title="Chats & The City Newsletter Signup"
+                width="100%"
+                height="360"
+                style={{ border: 0 }}
+              />
+            </div>
+
+            <p className="mt-2 text-xs text-gray-500">We’ll never spam. Pinky promise.</p>
+          </div>
+        </div>
+      </section>
 
       {/* HOSTS */}
       <section id="hosts" className="max-w-6xl mx-auto px-4 pb-20">
@@ -143,7 +153,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-6">
           <div>
             <div className="font-semibold">Chats & the City</div>
-            <p className="mt-2 text-sm text-gray-600">Women speaking freely, expansively, and unexpectedly — from us to the world.</p>
+            <p className="mt-2 text-sm text-gray-600">Women speaking freely, expansively, and unexpectedly — from Jakarta to the world.</p>
           </div>
           <div>
             <div className="font-semibold">Links</div>
