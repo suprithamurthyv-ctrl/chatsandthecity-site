@@ -38,7 +38,7 @@ export default function Home() {
       name: "Susmitha",
       bio:
         "Cat mom and real-life Disney princess, welcoming every animal into her magical garden.",
-      img: "/susmitha.jpg", // make sure filename in /public matches
+      img: "/susmithaa.jpg", // make sure filename in /public matches
     },
   ];
 
