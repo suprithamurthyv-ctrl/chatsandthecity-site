@@ -133,8 +133,7 @@ export default function Home() {
                 name="authenticity_token"
                 value="56A2qKm5Yilr7L8ILKEiX4dfw3wdM0X02cOcdwV9TTAeEeiDbSkdmAYaFi64_lza8Bbw316jsBxVJqHx61Nvww"
               />
-              {/* The original embed had a hidden honeypot + checkbox.
-                  We’ll simplify: keep a beacon value to satisfy their backend. */}
+              {/* Honeypot simplified */}
               <input type="hidden" name="beacon" value="1" />
 
               <input
@@ -167,4 +166,42 @@ export default function Home() {
             <div key={i} className="rounded-3xl border p-6 bg-white hover:shadow-md transition-shadow">
               <div className="aspect-square rounded-2xl overflow-hidden bg-gray-100">
                 <img src={p.img} alt={p.name} className="w-full h-full object-cover" />
-             
+              </div>
+              <h3 className="mt-4 font-semibold">{p.name}</h3>
+              <p className="mt-1 text-sm text-gray-600">{p.bio}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer id="contact" className="border-t bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-6">
+          <div>
+            <div className="font-semibold">Chats & the City</div>
+            <p className="mt-2 text-sm text-gray-600">Women speaking freely, expansively, and unexpectedly — from Jakarta to the world.</p>
+          </div>
+          <div>
+            <div className="font-semibold">Links</div>
+            <ul className="mt-2 space-y-2 text-sm">
+              <li><a href="#episodes" className="hover:underline">Episodes</a></li>
+              <li><a href="#about" className="hover:underline">About</a></li>
+              <li><a href="#hosts" className="hover:underline">Hosts</a></li>
+              <li><a href="#subscribe" className="hover:underline">Subscribe</a></li>
+            </ul>
+          </div>
+          <div>
+            <div className="font-semibold">Follow</div>
+            <ul className="mt-2 space-y-2 text-sm">
+              <li><a href="#" className="hover:underline">Instagram</a></li>
+              <li><a href="#" className="hover:underline">LinkedIn</a></li>
+              <li><a href="#" className="hover:underline">YouTube</a></li>
+              <li><a href="mailto:hello@chatsandthecity.com" className="hover:underline">hello@chatsandthecity.com</a></li>
+            </ul>
+          </div>
+        </div>
+        <div className="text-center text-xs text-gray-500 pb-8">© {new Date().getFullYear()} Chats & the City</div>
+      </footer>
+    </div>
+  );
+}
