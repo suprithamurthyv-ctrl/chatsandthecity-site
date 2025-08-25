@@ -1,4 +1,5 @@
 export default function Home() {
+  // ---- Data you can edit anytime ----
   const episodes = [
     { n: 1, title: "The First Sip", teaser: "Why women’s conversations are the strongest caffeine.", img: "/ep-first-sip.jpg" },
     { n: 2, title: "Cat Moms Unite", teaser: "On living with fur, claws, and unconditional love.", img: "/ep-cat-moms.jpg" },
@@ -6,10 +7,9 @@ export default function Home() {
   ];
 
   const hosts = [
-    // Make sure these filenames match exactly what you uploaded to /public
     { name: "Supritha (Host)", bio: "Witty conversation driver. Regional Director turned podcast troublemaker. Jakarta-based.", img: "/gelathi.jpg" },
     { name: "Bindu", bio: "Nature whisperer and keeper of calm, with roots deep in the earth.", img: "/bindu.jpg" },
-    { name: "Susmitha", bio: "Cat mom and real-life Disney princess, welcoming every animal into her magical garden.", img: "/susmitha.jpg" }
+    { name: "Susmitha", bio: "Cat mom and real-life Disney princess, welcoming every animal into her magical garden.", img: "/susmithaa.jpg" }
   ];
 
   return (
@@ -56,14 +56,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SUBSCRIBE STRIP */}
-      <section id="subscribe" className="border-y bg-gray-50">
+      {/* SUBSCRIBE STRIP (platform buttons) */}
+      <section className="border-y bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 py-10 md:py-12 grid md:grid-cols-2 gap-6 items-center">
           <div>
             <h2 className="text-2xl md:text-3xl font-bold">Subscribe wherever you listen</h2>
             <p className="mt-2 text-gray-600">Never miss an episode — join our mailing list or find us on your favorite platform.</p>
           </div>
           <div className="flex flex-wrap items-center gap-3">
+            {/* Replace # with your links when ready */}
             <a href="#" className="rounded-xl px-4 py-2 border bg-white shadow-sm hover:shadow text-sm">Apple Podcasts</a>
             <a href="#" className="rounded-xl px-4 py-2 border bg-white shadow-sm hover:shadow text-sm">Spotify</a>
             <a href="#" className="rounded-xl px-4 py-2 border bg-white shadow-sm hover:shadow text-sm">YouTube</a>
@@ -100,7 +101,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ABOUT + NEWSLETTER (GoDaddy iframe embed) */}
+      {/* ABOUT + NEWSLETTER (clean GoDaddy HTML embed) */}
       <section id="about" className="max-w-6xl mx-auto px-4 pb-16">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div>
@@ -116,16 +117,42 @@ export default function Home() {
             <h3 className="text-lg font-semibold">Newsletter</h3>
             <p className="mt-2 text-sm text-gray-600">Get episode drops, guest picks, and extras in your inbox.</p>
 
-            {/* GoDaddy Stylish Embedding iframe */}
-            <div className="mt-4 rounded-xl overflow-hidden border">
-              <iframe
-                src="https://gem.godaddy.com/signups/5319f7ed4bc549858a878844e19458b0/iframe"
-                title="Chats & The City Newsletter Signup"
-                width="100%"
-                height="360"
-                style={{ border: 0 }}
+            {/* Clean, styled form that posts to GoDaddy */}
+            <form
+              id="ema_signup_form"
+              target="_blank"
+              action="https://gem.godaddy.com/signups/subscribe/5319f7ed4bc549858a878844e19458b0"
+              acceptCharset="UTF-8"
+              method="post"
+              className="mt-4 flex w-full gap-2"
+            >
+              {/* Required hidden fields from GoDaddy embed */}
+              <input name="utf8" type="hidden" value="✓" />
+              <input
+                type="hidden"
+                name="authenticity_token"
+                value="56A2qKm5Yilr7L8ILKEiX4dfw3wdM0X02cOcdwV9TTAeEeiDbSkdmAYaFi64_lza8Bbw316jsBxVJqHx61Nvww"
               />
-            </div>
+              {/* The original embed had a hidden honeypot + checkbox.
+                  We’ll simplify: keep a beacon value to satisfy their backend. */}
+              <input type="hidden" name="beacon" value="1" />
+
+              <input
+                id="signup_email"
+                name="signup[email]"
+                type="email"
+                required
+                placeholder="you@example.com"
+                className="flex-1 rounded-xl border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black"
+              />
+              <button
+                type="submit"
+                id="webform_submit_button"
+                className="rounded-xl px-5 py-3 bg-black text-white font-medium hover:opacity-90"
+              >
+                Subscribe
+              </button>
+            </form>
 
             <p className="mt-2 text-xs text-gray-500">We’ll never spam. Pinky promise.</p>
           </div>
@@ -140,42 +167,4 @@ export default function Home() {
             <div key={i} className="rounded-3xl border p-6 bg-white hover:shadow-md transition-shadow">
               <div className="aspect-square rounded-2xl overflow-hidden bg-gray-100">
                 <img src={p.img} alt={p.name} className="w-full h-full object-cover" />
-              </div>
-              <h3 className="mt-4 font-semibold">{p.name}</h3>
-              <p className="mt-1 text-sm text-gray-600">{p.bio}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* FOOTER */}
-      <footer id="contact" className="border-t bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-6">
-          <div>
-            <div className="font-semibold">Chats & the City</div>
-            <p className="mt-2 text-sm text-gray-600">Women speaking freely, expansively, and unexpectedly — from Jakarta to the world.</p>
-          </div>
-          <div>
-            <div className="font-semibold">Links</div>
-            <ul className="mt-2 space-y-2 text-sm">
-              <li><a href="#episodes" className="hover:underline">Episodes</a></li>
-              <li><a href="#about" className="hover:underline">About</a></li>
-              <li><a href="#hosts" className="hover:underline">Hosts</a></li>
-              <li><a href="#subscribe" className="hover:underline">Subscribe</a></li>
-            </ul>
-          </div>
-          <div>
-            <div className="font-semibold">Follow</div>
-            <ul className="mt-2 space-y-2 text-sm">
-              <li><a href="#" className="hover:underline">Instagram</a></li>
-              <li><a href="#" className="hover:underline">LinkedIn</a></li>
-              <li><a href="#" className="hover:underline">YouTube</a></li>
-              <li><a href="mailto:hello@chatsandthecity.com" className="hover:underline">hello@chatsandthecity.com</a></li>
-            </ul>
-          </div>
-        </div>
-        <div className="text-center text-xs text-gray-500 pb-8">© {new Date().getFullYear()} Chats & the City</div>
-      </footer>
-    </div>
-  );
-}
+             
