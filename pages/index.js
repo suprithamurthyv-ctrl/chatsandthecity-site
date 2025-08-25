@@ -112,17 +112,15 @@ export default function Home() {
           </div>
 
           {/* Newsletter form (non-functional placeholder) */}
-          <div className="rounded-3xl border p-6 bg-gray-50">
-            <h3 className="text-lg font-semibold">Newsletter</h3>
-            <p className="mt-2 text-sm text-gray-600">Get episode drops, guest picks, and extras in your inbox.</p>
-            <form className="mt-4 flex w-full gap-2" onSubmit={(e)=>e.preventDefault()}>
-              <input type="email" required placeholder="you@email.com" className="flex-1 rounded-xl border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black" />
-              <button className="rounded-xl px-5 py-3 bg-black text-white font-medium">Join</button>
-            </form>
-            <p className="mt-2 text-xs text-gray-500">We’ll never spam. Pinky promise.</p>
-          </div>
-        </div>
-      </section>
+    <a
+  href="http://gem.godaddy.com/signups/5319f7ed4bc549858a878844e19458b0/join"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="rounded-xl px-5 py-3 bg-black text-white font-medium inline-block"
+>
+  Join the newsletter
+</a>
+
 
       {/* HOSTS */}
       <section id="hosts" className="max-w-6xl mx-auto px-4 pb-20">
