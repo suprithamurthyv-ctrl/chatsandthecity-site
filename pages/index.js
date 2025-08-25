@@ -217,7 +217,7 @@ export default function Home() {
               <li><a href="#" className="hover:underline">Instagram</a></li>
               <li><a href="#" className="hover:underline">LinkedIn</a></li>
               <li><a href="#" className="hover:underline">YouTube</a></li>
-              <li><a href="mailto:hello@chatsandthecity.com" className="hover:underline">hello@chatsandthecity.com</a></li>
+              <li><a href="mailto:supritha@chatsandthecity.com" className="hover:underline">supritha@chatsandthecity.com</a></li>
             </ul>
           </div>
         </div>
